@@ -33,7 +33,6 @@ public class Main extends Application
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(getClass().getResource("/Adress.fxml"));
         loader.load();
-
         Parent root = loader.getRoot();
         Controller controller = loader.getController();
         controller.setMain(this);

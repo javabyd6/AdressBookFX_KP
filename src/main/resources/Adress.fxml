@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:controller="Controller" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
@@ -20,7 +20,7 @@
               <items>
                 <AnchorPane prefHeight="398.0" prefWidth="256.0">
                      <children>
-                        <TableView fx:id="personTableView" layoutX="-7.0" layoutY="60.0" prefHeight="398.0" prefWidth="193.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <TableView fx:id="personTableView" layoutX="-7.0" layoutY="60.0" onMouseClicked="#selectedPerson" prefHeight="398.0" prefWidth="193.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                           <columns>
                             <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
                             <TableColumn fx:id="LastnameCol" prefWidth="102.0" text="Lastname" />
@@ -45,22 +45,22 @@
                           </rowConstraints>
                            <children>
                               <Label fx:id="nameLabel" text="Name" />
-                              <Label GridPane.columnIndex="1" />
+                              <Label fx:id="nameLabel0" GridPane.columnIndex="1" />
                               <Label fx:id="lastNameLabel" text="Lastname" GridPane.rowIndex="1" />
-                              <Label GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label fx:id="lastNameLabel0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                               <Label fx:id="adressLabel" text="Adress" GridPane.rowIndex="2" />
-                              <Label GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label fx:id="adressLabel0"  GridPane.columnIndex="1" GridPane.rowIndex="2" />
                               <Label fx:id="postalCodeLabel" text="Postal Code" GridPane.rowIndex="3" />
-                              <Label GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label fx:id="postalCodeLabel0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <Label fx:id="telephoneLabel" text="Telephone" GridPane.rowIndex="4" />
-                              <Label GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label fx:id="telephoneLabel0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                               <Label fx:id="CityLabel" text="CIty" GridPane.rowIndex="5" />
-                              <Label GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label fx:id="cityLabel0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                            </children>
                         </GridPane>
                         <ButtonBar layoutX="15.0" layoutY="344.0" prefHeight="40.0" prefWidth="397.0">
                           <buttons>
-                            <Button fx:id="newPersonButton" mnemonicParsing="false" text="New Person" />
+                            <Button onAction="#newPersonAction" fx:id="newPersonButton" mnemonicParsing="false" text="New Person" />
                               <Button fx:id="editButton" mnemonicParsing="false" text="Edit" />
                               <Button fx:id="deleteButton" mnemonicParsing="false" text="Delete" />
                               <Button fx:id="saveButton" mnemonicParsing="false" text="Save" />
