@@ -128,4 +128,18 @@ public class Controller implements Initializable
 
         newPersonStage.show();*/
     }
+
+    public void EditAction(ActionEvent actionEvent) throws IOException
+    {
+        Stage myStage = new Stage();
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("/EditPerson.fxml"));
+        loader.load();
+        Parent root = loader.getRoot();
+        newPersonController newPersonController = loader.getController();
+        newPersonController.setMain(getMain());
+        myStage.setScene(new Scene(root,650,400));
+        myStage.show();
+
+    }
 }
