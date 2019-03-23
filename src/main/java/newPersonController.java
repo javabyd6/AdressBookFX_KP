@@ -52,6 +52,7 @@ public class newPersonController
     public void initialize(URL location, ResourceBundle resources)
     {
 
+
     }*/
 
     public void saveClicked(ActionEvent actionEvent)
