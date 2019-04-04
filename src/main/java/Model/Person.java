@@ -21,6 +21,11 @@ public class Person
         this.PostalCode = new SimpleStringProperty(postalCode);
         this.Adress = new SimpleStringProperty(adress);
     }
+    public Person getPeson()
+    {
+        return this;
+    }
+
 
     public String getName()
     {

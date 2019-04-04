@@ -98,6 +98,11 @@ public class Controller implements Initializable
         LastnameCol.setCellValueFactory(c->c.getValue().lastNameProperty());
     }
 
+    public Controller getController()
+    {
+        return this;
+    }
+
     public void selectedPerson(MouseEvent mouseEvent)
     {
         Person person = personTableView.getSelectionModel().getSelectedItem();
@@ -131,15 +136,36 @@ public class Controller implements Initializable
 
     public void EditAction(ActionEvent actionEvent) throws IOException
     {
-        Stage myStage = new Stage();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/EditPerson.fxml"));
-        loader.load();
+        // FXMLLoader loader = new FXMLLoader();
+        //        loader.setLocation(getClass().getResource("PersonView.fxml"));
+        //Parent tableViewParent = loader.load();
+
+        Stage myStage = new Stage();//
+        FXMLLoader loader = new FXMLLoader();//
+        loader.setLocation(getClass().getResource("/EditPerson.fxml"));//
+        loader.load();//
+
         Parent root = loader.getRoot();
-        newPersonController newPersonController = loader.getController();
-        newPersonController.setMain(getMain());
+        EditController editController = loader.getController();
+        editController.setMain(getMain());
+        Person person = personTableView.getSelectionModel().getSelectedItem();
+        editController.initData(person, this);
+
         myStage.setScene(new Scene(root,650,400));
         myStage.show();
 
+    }
+
+    public void update()
+    {
+        Person person = personTableView.getSelectionModel().getSelectedItem();
+        nameLabel0.
+                setText(person
+                        .getName());
+        lastNameLabel0.setText(person.getLastName());
+        cityLabel0.setText(person.getCity());
+        adressLabel0.setText(person.getAdress());
+        postalCodeLabel0.setText(person.getPostalCode());
+        telephoneLabel0.setText(person.getTelephone());
     }
 }

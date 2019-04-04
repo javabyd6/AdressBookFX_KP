@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newPersonController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditController">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -76,12 +76,12 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Label text="Imie" />
-                  <Label text="Nazwisko" GridPane.rowIndex="1" />
-                  <Label text="Ulica" GridPane.rowIndex="2" />
-                  <Label text="Miasto" GridPane.rowIndex="3" />
-                  <Label text="Kod pocztowy" GridPane.rowIndex="4" />
-                  <Label text="Telefon kontaktowy" GridPane.rowIndex="5" />
+                  <Label text="Imie" fx:id="labelName" />
+                  <Label text="Nazwisko" fx:id="labelLastname" GridPane.rowIndex="1" />
+                  <Label text="Ulica" fx:id="labelStreet" GridPane.rowIndex="2" />
+                  <Label text="Miasto" fx:id="labelCity" GridPane.rowIndex="3" />
+                  <Label text="Kod pocztowy" fx:id="labelPostal" GridPane.rowIndex="4" />
+                  <Label text="Telefon kontaktowy" fx:id="labelPhone" GridPane.rowIndex="5" />
                   <TextField fx:id="inputName" GridPane.columnIndex="1" />
                   <TextField fx:id="inputLastname" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="inputAdress" GridPane.columnIndex="1" GridPane.rowIndex="2" />

@@ -14,13 +14,14 @@ public class Main extends Application
     public Main()
     {
         personObservableList.add(new Person("Jan","Kowalski", "bydgoska","Bydgoszcz", "85-000","555444888"));
-        personObservableList.add(new Person("Kowal","Janowski", "bydgoska","Bydgoszcz", "85-000","555444888"));
+        personObservableList.add(new Person("Kowal","Janowski", "torunska","Bydgoszcz", "85-010","555444888"));
     }
 
     public  ObservableList<Person> getPersonObservableList()
     {
         return personObservableList;
     }
+
 
     public static void main(String[] args)
         {

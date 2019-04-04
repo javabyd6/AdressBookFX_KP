@@ -90,8 +90,8 @@
                   <TextField fx:id="InputPhone" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </GridPane>
-            <Button onAction="#saveClicked" fx:id="saveButton" layoutX="463.0" layoutY="321.0" mnemonicParsing="false" text="Save" />
-            <Button onAction="#CancelClicked" fx:id="cancelButton" layoutX="547.0" layoutY="321.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="saveButton" layoutX="463.0" layoutY="321.0" mnemonicParsing="false" onAction="#saveClicked" text="Save" />
+            <Button fx:id="cancelButton" layoutX="547.0" layoutY="321.0" mnemonicParsing="false" onAction="#CancelClicked" text="Cancel" />
       </children>
     </AnchorPane>
   </children>
