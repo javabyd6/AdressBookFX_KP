@@ -101,6 +101,7 @@ public class EditController implements Initializable
         edited.setCity(inputMiasto.getText());
         //call controller.method();
 
+
         controller.update();
     }
 
