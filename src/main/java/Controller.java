@@ -168,4 +168,10 @@ public class Controller implements Initializable
         postalCodeLabel0.setText(person.getPostalCode());
         telephoneLabel0.setText(person.getTelephone());
     }
+
+    public void deleteAction(ActionEvent actionEvent)
+    {
+        Person person = personTableView.getSelectionModel().getSelectedItem();
+        main.getPersonObservableList().removeAll(person);
+    }
 }
